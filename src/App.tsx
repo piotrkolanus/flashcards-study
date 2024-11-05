@@ -135,7 +135,7 @@ return (
   <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 flex flex-col items-center justify-center p-4">
     <Card className="w-full max-w-md p-6 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-xl border border-purple-500 shadow-2xl">
       <h1 className="text-3xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-        Futuristic Flashcards
+        Flaszkards
       </h1>
       <div className="mb-6">
         <Input
