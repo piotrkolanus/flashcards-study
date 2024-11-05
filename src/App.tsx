@@ -87,11 +87,6 @@ const handleAnswerSubmit = () => {
   }
 }
 
-const getRequiredAnswerCount = (question: string) => {
-  const match = question.match(/\(Choose (\d+)\)$/)
-  return match ? parseInt(match[1]) : 1
-}
-
 const formatPossibleAnswers = (answers: string) => {
   return answers.split(',').map((answer, index) => {
     const letter = String.fromCharCode(65 + index)
