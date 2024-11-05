@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef} from 'react'
 import * as XLSX from 'xlsx'
 import { Button } from "./components/ui/button"
 import { Input } from "./components/ui/input"
 import { Card } from "./components/ui/card"
 import { Checkbox } from "./components/ui/checkbox"
 import { Label } from "./components/ui/label"
-import { ChevronLeftIcon, ChevronRightIcon, UploadIcon, EyeIcon, EyeOffIcon, CheckIcon, XIcon } from 'lucide-react'
+import { ChevronLeftIcon, ChevronRightIcon, EyeIcon, EyeOffIcon, CheckIcon, XIcon } from 'lucide-react'
 
 interface Flashcard {
 question: string
@@ -93,7 +93,6 @@ const getRequiredAnswerCount = (question: string) => {
 }
 
 const formatPossibleAnswers = (answers: string) => {
-  const requiredCount = getRequiredAnswerCount(flashcards[currentCardIndex].question)
   return answers.split(',').map((answer, index) => {
     const letter = String.fromCharCode(65 + index)
     return (
