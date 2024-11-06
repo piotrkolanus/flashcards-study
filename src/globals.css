@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 210 25% 98%;           /* Soft, calming light blue-grey */
+    --foreground: 220 15% 20%;           /* Dark charcoal text for readability */
+    
+    --card: 210 15% 95%;                 /* Light blue for card background */
+    --card-foreground: 220 15% 30%;      /* Dark text on card */
+    
+    --popover: 210 20% 97%;              /* Light popover background */
+    --popover-foreground: 220 15% 20%;   /* Dark popover text */
+    
+    --primary: 220 80% 60%;              /* Calm blue for primary actions */
+    --primary-foreground: 220 10% 98%;   /* White text on primary for contrast */
+    
+    --highlight: 45 100% 50%;            /* Subtle yellow for key focus areas */
+    --highlight-foreground: 220 10% 20%; /* Dark text on highlight */
+    
+    --correct: 140 50% 45%;              /* Green for correct answer feedback */
+    --correct-foreground: 220 10% 98%;   /* Light text on correct */
+    
+    --incorrect: 0 70% 55%;              /* Soft red for incorrect answers */
+    --incorrect-foreground: 220 10% 98%; /* White for contrast */
+    
+    --secondary: 220 10% 80%;            /* Muted blue */
+    --secondary-foreground: 220 20% 30%; /* Dark grey text */
+    
+    --muted: 220 5% 90%;                 /* Very light grey for muted elements */
+    --muted-foreground: 220 15% 40%;     /* Medium grey for muted text */
+    
+    --border: 210 10% 80%;               /* Soft border to frame components */
+    --input: 210 10% 95%;                /* Light blue-grey for inputs */
+    --ring: 220 80% 60%;                 /* Ring to match primary */
+
+    --accent: 120,73.3%,50%;             /* Answer result positive */
+    --destructive:0,73.3%,50%;           /* Answer result negative */
+    
+    --radius: 0.5rem;                    /* Rounded corners */
+  }
+
+  /* Dark Mode Colors */
+  .dark {
+    --background: 210 20% 12%;           /* Dark blue-grey for background */
+    --foreground: 220 10% 90%;           /* Light grey text */
+    
+    --card: 210 20% 18%;                 /* Darker blue for card */
+    --card-foreground: 220 10% 95%;      /* Light text on card */
+    
+    --popover: 210 20% 20%;              /* Popover background */
+    --popover-foreground: 220 10% 90%;   /* Light text on popover */
+    
+    --primary: 220 70% 55%;              /* Softer blue for dark mode */
+    --primary-foreground: 220 10% 98%;   /* Light text on primary */
+    
+    --highlight: 45 80% 40%;             /* Muted yellow for highlight */
+    --highlight-foreground: 220 10% 20%; /* Dark text on highlight */
+    
+    --correct: 140 50% 45%;              /* Green for correct answers */
+    --correct-foreground: 220 10% 98%;   /* Light text on correct */
+    
+    --incorrect: 0 60% 55%;              /* Red for incorrect */
+    --incorrect-foreground: 220 10% 98%; /* Almost white text */
+    
+    --secondary: 220 15% 35%;            /* Muted grey-blue */
+    --secondary-foreground: 220 10% 90%; /* Light grey text */
+    
+    --muted: 220 15% 20%;                /* Muted, darker grey */
+    --muted-foreground: 220 10% 65%;     /* Light muted text */
+    
+    --border: 220 20% 25%;               /* Dark border */
+    --input: 220 20% 25%;                /* Dark input */
+    --ring: 220 80% 65%;                 /* Matches primary */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-card text-card-foreground shadow-md rounded-lg;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+  }
+
+  .btn-correct {
+    @apply bg-correct text-correct-foreground hover:bg-correct/90 transition-colors;
+  }
+
+  .btn-incorrect {
+    @apply bg-incorrect text-incorrect-foreground hover:bg-incorrect/90 transition-colors;
+  }
+
+  .btn-highlight {
+    @apply bg-highlight text-highlight-foreground;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors;
+  }
+
+  /* Input Field */
+  input {
+    @apply bg-input text-foreground border border-border rounded-md focus:ring focus:ring-ring;
+  }
+}
