@@ -146,9 +146,9 @@ const formatPossibleAnswers = (answers: string) => {
   })
 }
 
-// const calculateScore = () => {
-//   return totalAttempts > 0 ? Math.round((correctAnswers / totalAttempts) * 100) : 0
-// }
+const calculateScore = () => {
+  return totalAttempts > 0 ? Math.round((correctAnswers / totalAttempts) * 100) : 0
+}
 
 return (
   <div className="app min-h-screen bg-background flex flex-col items-center justify-center p-4">
@@ -239,8 +239,9 @@ return (
         >
         <ChevronLeftIcon className="mr-2 h-4 w-4" /> Previous
         </Button>
-        <div className="mt-1 text-center text-muted-foreground">
-              <p>Card {currentCardIndex + 1} of {flashcards.length}</p>         
+        <div className="text-center text-muted-foreground">
+              <p>Card {currentCardIndex + 1} of {flashcards.length}</p>
+              <p>Score: {calculateScore()}% ({correctAnswers}/{totalAttempts})</p>        
         </div>
         <Button 
           onClick={handleNextCard} 
