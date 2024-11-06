@@ -146,9 +146,9 @@ const formatPossibleAnswers = (answers: string) => {
   })
 }
 
-const calculateScore = () => {
-  return totalAttempts > 0 ? Math.round((correctAnswers / totalAttempts) * 100) : 0
-}
+// const calculateScore = () => {
+//   return totalAttempts > 0 ? Math.round((correctAnswers / totalAttempts) * 100) : 0
+// }
 
 return (
   <div className="app min-h-screen bg-background flex flex-col items-center justify-center p-4">
